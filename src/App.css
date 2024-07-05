@@ -86,8 +86,8 @@ header h1 {
 }
 
 .card {
-  width: 500px;
-  height: 300px;
+  width: 600px;
+  height: 400px;
   background-color: white;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   border-radius: 2px;
@@ -181,16 +181,29 @@ header h1 {
 }
 .card .main-card .task:hover {
   font-size: large;
-  background-color: rgba(80, 218, 186, 0.538);
+  background-color: rgba(2, 223, 153, 0.532);
 }
-.card .main-card .task:hover .task-button {
+.card .main-card .task:hover .fa-check {
+  opacity: 1;
+}
+.card .main-card .task:hover .fa-check-double {
   opacity: 1;
 }
 .card .main-card .task:hover .fa-trash {
   opacity: 1;
 }
+.card .main-card .task:hover .todo {
+  color: rgba(50, 128, 110, 0.308);
+}
+.card .main-card .task:hover .active {
+  color: rgba(63, 185, 148, 0.807);
+}
+.card .main-card .task:hover .completed {
+  color: rgba(0, 205, 140, 0.807);
+}
 .card .main-card .task .task-data {
   width: 75%;
+  margin-top: 15px;
 }
 .card .main-card .task .task-data p {
   margin: 5px;
@@ -198,23 +211,35 @@ header h1 {
 .card .main-card .task .task-data .task-name {
   color: rgb(36, 152, 125);
 }
-.card .main-card .task .task-button {
+.card .main-card .task .fa-check {
   height: 25px;
+  margin-right: 5px;
   opacity: 0;
   margin-top: 15px;
-  border: 1px rgb(0, 133, 124) solid;
-  border-radius: 5px;
-  background-color: rgba(117, 210, 188, 0.538);
+  color: rgba(3, 219, 169, 0.734);
   transition: ease-in 0.4s;
   cursor: pointer;
 }
-.card .main-card .task .task-button:hover {
-  scale: 1.1;
-  background-color: rgba(24, 157, 126, 0.538);
-  border: 2px rgb(0, 133, 124) solid;
+.card .main-card .task .fa-check:hover {
+  scale: 1.2;
+  color: rgba(4, 158, 122, 0.734);
+}
+.card .main-card .task .fa-check-double {
+  height: 25px;
+  margin-right: 5px;
+  opacity: 0;
+  margin-top: 15px;
+  color: rgba(3, 219, 169, 0.734);
+  transition: ease-in 0.4s;
+  cursor: pointer;
+}
+.card .main-card .task .fa-check-double:hover {
+  scale: 1.2;
+  color: rgba(4, 158, 122, 0.734);
 }
 .card .main-card .task .fa-trash {
   height: 22px;
+  margin-left: 5px;
   opacity: 0;
   margin-top: 15px;
   color: #dd624f;
@@ -226,6 +251,18 @@ header h1 {
   color: #e2381e;
 }
 .card .main-card .task strong {
+  font-weight: bolder;
+}
+.card .main-card .todo {
+  color: rgba(123, 216, 194, 0.773);
+  font-weight: bold;
+}
+.card .main-card .active {
+  color: rgba(30, 183, 148, 0.974);
+  font-weight: bold;
+}
+.card .main-card .completed {
+  color: rgba(0, 210, 144, 0.958);
   font-weight: bold;
 }
 .card .footer-card {
@@ -238,6 +275,10 @@ header h1 {
   width: 30%;
   padding: 10px;
   padding-bottom: 10px;
+  color: rgb(36, 152, 125);
+}
+.card .footer-card .item-number strong {
+  font-weight: 800;
 }
 .card .footer-card .control-div {
   width: 70%;
@@ -258,10 +299,11 @@ header h1 {
   cursor: pointer;
 }
 .card .footer-card .control-div nav li:hover {
+  color: rgba(5, 238, 183, 0.825);
   scale: 1.1;
-  color: rgb(112, 112, 112);
 }
 .card .footer-card .control-div nav .selected {
   border: 2px rgba(117, 210, 188, 0.538) solid;
   border-radius: 5px;
+  color: rgba(76, 182, 157, 0.777);
 }

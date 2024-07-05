@@ -1,6 +1,6 @@
 .card {
-    width: 500px;
-    height: 300px;
+    width: 600px;
+    height: 400px;
     background-color: white;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     border-radius: 2px;
@@ -102,18 +102,33 @@
 
             &:hover {
                 font-size: large;
-                background-color: rgba(80, 218, 186, 0.538);
+                background-color: rgba(2, 223, 153, 0.532);
 
-                .task-button {
+                .fa-check {
+                    opacity: 1;
+                }
+                .fa-check-double {
                     opacity: 1;
                 }
                 .fa-trash {
                     opacity: 1;
                 }
+
+
+                .todo {
+                    color: rgba(50, 128, 110, 0.308);
+                }
+                .active {
+                    color: rgba(63, 185, 148, 0.807);
+                }
+                .completed {
+                    color:  rgba(0, 205, 140, 0.807);
+                }
             }
 
             .task-data {
                 width: 75%;
+                margin-top: 15px;
 
                 p {
                     margin: 5px;
@@ -124,24 +139,37 @@
                 }
             }
 
-            .task-button {
+            .fa-check {
                 height: 25px;
+                margin-right: 5px;
                 opacity: 0;
                 margin-top: 15px;
-                border: 1px rgb(0, 133, 124) solid;
-                border-radius: 5px;
-                background-color: rgba(117, 210, 188, 0.538);
+                color: rgba(3, 219, 169, 0.734);
                 transition: ease-in 0.4s;
                 cursor: pointer;
                 &:hover {
-                    scale: 1.1;
-                    background-color: rgba(24, 157, 126, 0.538);
-                    border: 2px rgb(0, 133, 124) solid;;
+                    scale: 1.2;
+                    color: rgba(4, 158, 122, 0.734);
+                }
+            }
+
+            .fa-check-double {
+                height: 25px;
+                margin-right: 5px;
+                opacity: 0;
+                margin-top: 15px;
+                color: rgba(3, 219, 169, 0.734);
+                transition: ease-in 0.4s;
+                cursor: pointer;
+                &:hover {
+                    scale: 1.2;
+                    color: rgba(4, 158, 122, 0.734);
                 }
             }
 
             .fa-trash {
                 height: 22px;
+                margin-left: 5px;
                 opacity: 0;
                 margin-top: 15px;
                 color: #dd624f;
@@ -155,8 +183,22 @@
             }
 
             strong {
-                font-weight: bold;
+                font-weight:bolder;
             }
+        }
+        .todo {
+            color: rgba(123, 216, 194, 0.773);
+            font-weight: bold;
+        }
+
+        .active {
+            color: rgba(30, 183, 148, 0.974);
+            font-weight: bold;
+        }
+        
+        .completed {
+            color: rgba(0, 210, 144, 0.958);
+            font-weight: bold;
         }
         
     }
@@ -171,6 +213,10 @@
             width: 30%;
             padding: 10px;
             padding-bottom: 10px;
+            color: rgb(36, 152, 125);
+            strong {
+                font-weight: 800;
+            }
         }
 
         .control-div {
@@ -189,14 +235,16 @@
                     cursor: pointer;
 
                     &:hover {
+                        color: rgba(5, 238, 183, 0.825);
                         scale: 1.1;
-                        color: rgb(112, 112, 112);
                     }
                 }
 
                 .selected {
                     border: 2px rgba(117, 210, 188, 0.538) solid;
                     border-radius: 5px;
+                    color: rgba(76, 182, 157, 0.777);
+
                 }
             }
         }
