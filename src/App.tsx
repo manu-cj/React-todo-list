@@ -7,7 +7,10 @@ import Task from './Task';
 function App() {
   return (
     <>
-      <Task/>
+      <header>
+        <h1>Todos</h1>
+      </header>
+      <Task />
     </>
   );
 }

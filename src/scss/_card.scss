@@ -1,0 +1,93 @@
+.card {
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 2px;
+    font-family: "Kalam", cursive;
+
+    .header-card {
+        width: 100%;
+        height: 50px;
+
+        input {
+            padding-left: 50px;
+            width: 100%;
+            height: 100%;
+            border: none;
+            box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+            outline: 1px rgba(221, 221, 221, 0.538) solid;
+            font-size: x-large;
+            font-weight: 400;
+            color: rgb(114, 114, 114);
+            &:focus {
+                outline: 2px rgba(117, 210, 188, 0.538) solid;
+            }
+            &::placeholder {
+                font-weight: 200;
+                color: rgb(218, 218, 218);
+            }
+        } 
+    }
+
+    .main-card {
+        width: 100%;
+        height: 70%;
+        .task {
+            padding: 15px 20px;
+            border-bottom: 1px rgba(172, 172, 172, 0.715) solid;
+            font-family: "Kalam", cursive;
+            color: rgb(94, 93, 93);
+            list-style-type: none;
+            transition: ease-in 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                font-size: large;
+                background-color: rgba(217, 217, 217, 0.715);
+            }
+        }
+        
+    }
+
+    .footer-card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        color: rgb(151, 152, 153);
+
+        .item-number {
+            width: 30%;
+            padding: 10px;
+            padding-bottom: 10px;
+        }
+
+        .control-div {
+            width: 70%;
+            nav {
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                align-items: center;
+                column-gap: 10px;
+                padding-left: 15px;
+                li {
+                    padding: 4px;
+                    margin-top: 10px;
+                    list-style-type: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        scale: 1.1;
+                        color: rgb(112, 112, 112);
+                    }
+                }
+
+                .selected {
+                    border: 2px rgba(117, 210, 188, 0.538) solid;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+} 
