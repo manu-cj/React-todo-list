@@ -96,17 +96,15 @@ header h1 {
 .card .header-card {
   width: 100%;
   height: 50px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
 }
 .card .header-card input {
-  padding-left: 50px;
-  width: 100%;
   height: 100%;
   border: none;
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-  outline: 1px rgba(221, 221, 221, 0.538) solid;
-  font-size: x-large;
-  font-weight: 400;
-  color: rgb(114, 114, 114);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
 .card .header-card input:focus {
   outline: 2px rgba(117, 210, 188, 0.538) solid;
@@ -118,6 +116,30 @@ header h1 {
 .card .header-card input::placeholder {
   font-weight: 200;
   color: rgb(218, 218, 218);
+}
+.card .header-card .task-input {
+  padding-left: 30px;
+  width: 69%;
+  font-size: x-large;
+  font-weight: 400;
+  color: rgb(114, 114, 114);
+}
+.card .header-card .date-input {
+  width: 20%;
+}
+.card .header-card .fa-plus {
+  border: none;
+  background-color: white;
+  color: rgba(117, 210, 188, 0.538);
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: xx-large;
+  cursor: pointer;
+  transition: ease-in 0.5s;
+}
+.card .header-card .fa-plus:hover {
+  scale: 1.1;
+  color: aquamarine;
 }
 .card .main-card {
   width: 100%;
@@ -134,7 +156,7 @@ header h1 {
 }
 .card .main-card .task:hover {
   font-size: large;
-  background-color: rgba(217, 217, 217, 0.715);
+  background-color: rgba(117, 210, 188, 0.538);
 }
 .card .footer-card {
   width: 100%;
