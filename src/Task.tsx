@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons'
 
 interface TaskItem {
-  task: string;
+  name: string;
   active: boolean;
   completed: boolean;
+  end : string;
 }
 
 function Task() {
@@ -13,18 +14,34 @@ function Task() {
   const [date, setDate] = useState<string>("");
 
    function addTask() {
-    const newTask = { task: task, active:false ,completed: false, end:date };
+    const newTask = { name: task, active:false ,completed: false, end:date };
     const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]') as TaskItem[];
     const newTasks = [...storedTasks, newTask];
     localStorage.setItem('tasks', JSON.stringify(newTasks));
-    setTask(newTasks[0].task);
+    setTask(newTasks[0].name);
     setTask('');
     setDate(''); 
    }
 
    const handleDateChange = (event:React.ChangeEvent<HTMLInputElement>) => {
-    setDate(event.target.value); // Mettre à jour l'état 'date' lorsque l'entrée de la date change
+    setDate(event.target.value);
   }
+
+  const tasks = JSON.parse(localStorage.getItem('tasks') || '[]') as TaskItem[];
+  console.log(tasks);
+
+  const listTasks = tasks.map((task, index) => (
+    <li className="task" key={index}>
+      <div className="task-data">
+        <p><strong>End : </strong>{task.end} </p>
+        <p className='task-name'>{task.name}</p>
+      </div>
+      <button className='task-button'>take</button>
+      <FontAwesomeIcon className='add-task-button' icon={faTrash} onClick={addTask} />
+    </li>
+  ));
+
+  const countTask = tasks.length;
 
     return (
       <>
@@ -35,11 +52,10 @@ function Task() {
           <FontAwesomeIcon className='add-task-button' icon={faPlus} onClick={addTask} />
         </div>
         <div className="main-card">
-          <li className="task"><input type="checkbox" name="check-task" className="check-task" />Learn React</li>
-          <li className="task"><input type="checkbox" name="check-task" className="check-task" />Learn TypeScript</li>
+          {listTasks}
         </div>
         <div className="footer-card">
-          <div className="item-number"><p>Item : 2</p></div>
+          <div className="item-number"><p>Item : {countTask} </p></div>
           <div className="control-div">
             <nav>
               <li className="selected">All</li>
