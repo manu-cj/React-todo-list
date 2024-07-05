@@ -40,7 +40,7 @@ function Task() {
         <p>End : {task.end} </p>
         <p className='task-name'><strong>{task.name}</strong></p>
       </div>
-      <FontAwesomeIcon className='add-doing-button' title='add this task in active' icon={faCheckDouble}  />
+      <FontAwesomeIcon className='add-doing-button' title='add this task in completed' icon={faCheckDouble}  />
       <FontAwesomeIcon className='delete-button' title='delete this task' icon={faTrash}  />
     </li>
     :
