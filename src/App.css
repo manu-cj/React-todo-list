@@ -181,7 +181,7 @@ header h1 {
 }
 .card .main-card .task:hover {
   font-size: large;
-  background-color: rgba(2, 223, 153, 0.532);
+  background-color: rgba(150, 246, 215, 0.532);
 }
 .card .main-card .task:hover .fa-check {
   opacity: 1;
@@ -256,14 +256,77 @@ header h1 {
 .card .main-card .todo {
   color: rgba(123, 216, 194, 0.773);
   font-weight: bold;
+  font-size: x-small;
 }
 .card .main-card .active {
   color: rgba(30, 183, 148, 0.974);
   font-weight: bold;
+  font-size: x-small;
 }
 .card .main-card .completed {
   color: rgba(0, 210, 144, 0.958);
   font-weight: bold;
+  font-size: x-small;
+}
+.card .main-card .taskUpdate {
+  height: 50px;
+}
+.card .main-card .taskUpdate input[type=text] {
+  width: 50%;
+  font-size: x-large;
+  font-weight: 400;
+  color: rgb(114, 114, 114);
+}
+.card .main-card .taskUpdate input[type=date] {
+  width: 25%;
+  font-size: x-large;
+  font-weight: 400;
+  margin-left: 15px;
+}
+.card .main-card .taskUpdate input {
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+}
+.card .main-card .taskUpdate input:focus {
+  outline: 2px rgba(117, 210, 188, 0.538) solid;
+}
+.card .main-card .taskUpdate input::-moz-placeholder {
+  font-weight: 200;
+  color: rgb(218, 218, 218);
+}
+.card .main-card .taskUpdate input::placeholder {
+  font-weight: 200;
+  color: rgb(218, 218, 218);
+}
+.card .main-card button {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(0, 86, 57);
+  background-color: rgb(0, 254, 170);
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  font-weight: bold;
+}
+.card .main-card button:hover {
+  color: white;
+  background-color: rgb(2, 196, 131);
+  scale: 1.1;
+}
+.card .main-card .delete-button {
+  height: 22px;
+  margin-left: 5px;
+  margin-top: 15px;
+  color: #dd624f;
+  transition: ease-in 0.4s;
+  cursor: pointer;
+  margin-left: 30px;
+}
+.card .main-card .delete-button:hover {
+  scale: 1.2;
+  color: #e2381e;
 }
 .card .footer-card {
   width: 100%;
