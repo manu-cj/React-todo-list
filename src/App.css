@@ -99,7 +99,7 @@ header h1 {
   display: flex;
   flex-direction: row;
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-between;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
 .card .header-card input {
@@ -128,7 +128,7 @@ header h1 {
   background-color: white;
   color: rgba(117, 210, 188, 0.538);
   margin-top: 10px;
-  margin-left: 10px;
+  margin-right: 5px;
   font-size: xx-large;
   cursor: pointer;
   transition: ease-in 0.5s;
@@ -177,7 +177,7 @@ header h1 {
 }
 .card .main-card .task:hover {
   font-size: large;
-  background-color: rgba(150, 246, 215, 0.532);
+  background-color: rgba(181, 254, 231, 0.532);
 }
 .card .main-card .task:hover .fa-check {
   opacity: 1;
@@ -378,4 +378,15 @@ header h1 {
   border: 2px rgba(117, 210, 188, 0.538) solid;
   border-radius: 5px;
   color: rgba(76, 182, 157, 0.777);
+}
+
+.all-task {
+  z-index: 3;
+  position: relative;
+}
+
+.active-task {
+  position: relative;
+  bottom: 390px;
+  left: 10px;
 }
