@@ -21,6 +21,8 @@ function Task() {
   const [editingTaskIndex, setEditingTaskIndex] = useState<number | null>(null);
   const [taskNameUpdate, setTaskNameUpdate] = useState<string>("");
   const [taskDateUpdate, setTaskDateUpdate] = useState<string>("");
+  const [deleteTaskIndex, setDeleteTaskIndex] = useState<number | null>(null);
+  
 
   function addTask() {
     const newTask = { name: task, active: false, completed: false, end: date };
@@ -53,6 +55,16 @@ function Task() {
     setEditingTaskIndex(null);
     setTaskNameUpdate("");
   }
+
+  const deleteTaskActived = (index:number) => {
+    setDeleteTaskIndex(index);
+  }
+
+  const confirmDeleteTask = (index: number) => {
+    const updatedTasks = tasks.filter((_, i) => i !== index);
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+    setDeleteTaskIndex(null);
+  };
 
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setDate(event.target.value);
@@ -107,7 +119,13 @@ function Task() {
                 onClick={stopUpdate}
               />
             </div>
-          ) : (
+            ) : deleteTaskIndex === index ? (
+              <div className="delete-confirmation">
+                <p>Are you sure you want to delete this task?</p>
+                <button className="deleteTask" onClick={() => confirmDeleteTask(index)}>Yes</button>
+                <button onClick={() => setDeleteTaskIndex(null)}>No</button>
+              </div>
+            ) : (
             <>
               <p className="active">Active</p>
               <div className="task-data">
@@ -125,6 +143,7 @@ function Task() {
                 className="delete-button"
                 title="delete this task"
                 icon={faTrash}
+                onClick={() => deleteTaskActived(index)}
               />
             </>
           )}
@@ -173,7 +192,13 @@ function Task() {
                 onClick={stopUpdate}
               />
             </div>
-          ) : (
+          ) : deleteTaskIndex === index ? (
+              <div className="delete-confirmation">
+                <p>Are you sure you want to delete this task?</p>
+                <button className="deleteTask" onClick={() => confirmDeleteTask(index)}>Yes</button>
+                <button onClick={() => setDeleteTaskIndex(null)}>No</button>
+              </div>
+            ) : (
             <>
               <p className="todo">todo</p>
               <div className="task-data">
@@ -191,6 +216,7 @@ function Task() {
                 className="delete-button"
                 title="delete this task"
                 icon={faTrash}
+                onClick={() => deleteTaskActived(index)}
               />
             </>
           )}
@@ -240,7 +266,13 @@ function Task() {
                 onClick={stopUpdate}
               />
             </div>
-          ) : (
+          ) : deleteTaskIndex === index ? (
+            <div className="delete-confirmation">
+              <p>Are you sure you want to delete this task?</p>
+              <button className="deleteTask" onClick={() => confirmDeleteTask(index)}>Yes</button>
+              <button onClick={() => setDeleteTaskIndex(null)}>No</button>
+            </div>
+          ) :  (
             <>
               <p className="completed">Completed</p>
               <div className="task-data">
@@ -258,6 +290,7 @@ function Task() {
                 className="delete-button"
                 title="delete this task"
                 icon={faTrash}
+                onClick={() => deleteTaskActived(index)}
               />
             </>
           )}

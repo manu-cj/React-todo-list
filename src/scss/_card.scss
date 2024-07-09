@@ -235,6 +235,28 @@
             }
         }
 
+        .delete-confirmation {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+
+            button {
+                height: 30px;
+                width: 50px;
+            }
+
+            .deleteTask {
+                background-color: #dd624f;
+                transition: 0.3s ease-in;
+
+                &:hover {
+                    background-color: #e2381e;
+                }
+            }
+        }
+
         button {
             border: none;
             padding: 5px;
