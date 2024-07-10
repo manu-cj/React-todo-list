@@ -15,7 +15,12 @@ interface TaskItem {
   end: string;
 }
 
-function Task() {
+interface ActiveTasksProps {
+  style: React.CSSProperties;
+  changeDisplay: () => void;
+}
+
+const Task:  React.FC<ActiveTasksProps> = ({ style, changeDisplay }) => {
   const [task, setTask] = useState<string>("");
   const [date, setDate] = useState<string>("");
   const [editingTaskIndex, setEditingTaskIndex] = useState<number | null>(null);
@@ -302,7 +307,7 @@ function Task() {
 
   return (
     <>
-      <section className="card all-task">
+      <section className="card all-task" style={style}>
         <div className="header-card">
           <input
             type="text"
@@ -335,8 +340,8 @@ function Task() {
           <div className="control-div">
             <nav>
               <li className="selected">All</li>
-              <li>Active</li>
-              <li>Completed</li>
+              <li onClick={changeDisplay}>Active</li>
+              <li onClick={changeDisplay}>Completed</li>
             </nav>
           </div>
         </div>

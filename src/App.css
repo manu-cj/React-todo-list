@@ -102,6 +102,13 @@ header h1 {
   justify-content: space-between;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
+.card .header-card h2 {
+  font-size: large;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 15px;
+  color: rgb(36, 152, 125);
+}
 .card .header-card input {
   height: 100%;
   border: none;
@@ -381,12 +388,73 @@ header h1 {
 }
 
 .all-task {
-  z-index: 3;
   position: relative;
 }
 
 .active-task {
   position: relative;
-  bottom: 390px;
+}
+
+.completed-task {
+  position: relative;
+  bottom: 790px;
   left: 10px;
+}
+
+@keyframes showCard {
+  0% {
+    transform: translateX(0) rotate(-5deg);
+    z-index: 0;
+  }
+  40% {
+    transform: translateX(350px) rotate(-7deg);
+    z-index: 0;
+  }
+  60% {
+    z-index: 3;
+  }
+  70% {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  }
+  100% {
+    transform: translate(-10);
+    z-index: 3;
+  }
+}
+@keyframes hideCard {
+  0% {
+    transform: translateX(0) rotate(5deg);
+    z-index: 2;
+  }
+  40% {
+    transform: translateX(-350px) rotate(7deg);
+    z-index: 2;
+  }
+  60% {
+    z-index: 0;
+  }
+  70% {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+  100% {
+    transform: translate(15) rotate(5deg);
+    z-index: 0;
+  }
+}
+@keyframes hideCard2 {
+  0% {
+    transform: translateX(0) rotate(5deg);
+    z-index: 4;
+  }
+  40% {
+    transform: translateX(350px) rotate(7deg);
+    z-index: 2;
+  }
+  60% {
+    z-index: 0;
+  }
+  100% {
+    transform: translate(15) rotate(5deg);
+    z-index: 0;
+  }
 }
