@@ -54,6 +54,7 @@ function App() {
       }));
     }, 400);
   };
+
   const [tasks, setTasks] = useState<TaskItem[]>(() => {
     const storedTasks = JSON.parse(localStorage.getItem("tasks") || "[]");
     return storedTasks;

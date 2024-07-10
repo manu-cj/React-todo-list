@@ -14,7 +14,7 @@ interface ActiveTasksProps {
   tasks: TaskItem[];
   setTasks: React.Dispatch<React.SetStateAction<TaskItem[]>>;
   style: React.CSSProperties;
-  changeDisplay: () => void;
+  changeDisplay: () => void;  
 }
 
 const CompletedTasks: React.FC<ActiveTasksProps> = ({tasks, setTasks, style, changeDisplay }) => {

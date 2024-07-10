@@ -441,20 +441,3 @@ header h1 {
     z-index: 0;
   }
 }
-@keyframes hideCard2 {
-  0% {
-    transform: translateX(0) rotate(5deg);
-    z-index: 4;
-  }
-  40% {
-    transform: translateX(350px) rotate(7deg);
-    z-index: 2;
-  }
-  60% {
-    z-index: 0;
-  }
-  100% {
-    transform: translate(15) rotate(5deg);
-    z-index: 0;
-  }
-}
