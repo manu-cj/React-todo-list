@@ -68,6 +68,7 @@ useEffect(() => {
   return (
     <>
       <header>
+        <nav><li><a href="/calendar">Calendar</a></li></nav>
         <h1>Todos</h1>
       </header>
       {/* <Task style={style} changeDisplay={getActive} changeDisplay2={getCompleted}/> */}
