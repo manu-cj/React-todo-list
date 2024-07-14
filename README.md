@@ -1,11 +1,11 @@
 ### https://react-todolist-manu-cj.netlify.app/
 
-#### une petite application de tâches qui réside dans votre navigateur et qui enregistre les tâches même après le redémarrage du navigateur.
+- une petite application de tâches qui réside dans votre navigateur et qui enregistre les tâches même après le redémarrage du navigateur.
 
 ### Language
-#### React
-#### TypeScript
+- React
+- TypeScript
 
 ### Outils
-#### Vite Js
-#### Paquage calendar
+- Vite Js
+- Paquage calendar
