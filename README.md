@@ -23,3 +23,4 @@
 
 Vous pouvez essayer l'application en ligne à l'adresse suivante : [Todo List](https://react-todolist-manu-cj.netlify.app/)
 
+![todolist](./public/todolist-react.gif)
