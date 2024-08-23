@@ -1,7 +1,7 @@
 # Todo List
 
 ## Description
-
+ 
 **Todo List** est une petite application de gestion de tâches qui réside dans votre navigateur. Elle permet de créer, modifier, supprimer et gérer des tâches, et elle conserve les tâches même après le redémarrage du navigateur grâce à l'utilisation du stockage local. Cette application a été développée avec **React** et **TypeScript**, utilisant **Vite.js** comme outil de build, et inclut un paquet de calendrier pour gérer les tâches liées au temps.
 
 ## Fonctionnalités
